@@ -2,10 +2,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Send, Footprints } from "lucide-react";
 
-import { RiArrowDownSLine } from "react-icons/ri";
+import {
+  RiArrowDownSLine,
+  RiBriefcase4Fill,
+  RiGroupFill,
+  RiTeamFill,
+} from "react-icons/ri";
 
 // Components
-import HeroImg from "./HeroImg";
+import EarthCanvas from "./Earth";
 import Badge from "./Badge";
 import Socials from "./Socials";
 import Image from "next/image";
@@ -17,11 +22,33 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/* image */}
           <div className="hidden xl:flex relative">
-            <div className="bg-hero w-[800px] h-[800px] bg-no-repeat absolute -top-20 -right-[160px]"></div>
-            <HeroImg
-              containerStyles="w-[510px] h-[462px] relative"
-              imgSrc="/home/world.png"
+            {/* bage #1 */}
+            <Badge
+              containerStyles="absolute top-[5%] -left-[5rem]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={27}
+              badgeText={"Años de experiencia"}
             />
+            {/* bage #2 */}
+            <Badge
+              containerStyles="absolute top-[60%] -left-[5rem]"
+              icon={<RiGroupFill />}
+              endCountNum={44}
+              endCountText="+"
+              badgeText={"Clientes"}
+            />
+            {/* bage #3 */}
+            <Badge
+              containerStyles="absolute top-[35%] -right-[5rem]"
+              icon={<RiTeamFill />}
+              endCountNum={1}
+              endCountText="k"
+              badgeText={"Colaboradores y expertos"}
+            />
+            <div className="bg-hero w-[800px] h-[900px] bg-no-repeat absolute -top-20 -right-[160px]"></div>
+            <div className="w-[520px] h-[472px] relative">
+              <EarthCanvas />
+            </div>
           </div>
 
           {/* text */}
