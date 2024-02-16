@@ -12,7 +12,7 @@ import {
 // Components
 import EarthCanvas from "./Earth";
 import Badge from "./Badge";
-import Socials from "./Socials";
+// import Socials from "./Socials";
 import Image from "next/image";
 
 const Hero = () => {
@@ -31,19 +31,19 @@ const Hero = () => {
             />
             {/* bage #2 */}
             <Badge
+              containerStyles="absolute top-[38%] -right-[5rem]"
+              icon={<RiTeamFill />}
+              endCountNum={1}
+              endCountText="k"
+              badgeText={"Colaboradores y expertos"}
+            />
+            {/* bage #3 */}
+            <Badge
               containerStyles="absolute top-[60%] -left-[5rem]"
               icon={<RiGroupFill />}
               endCountNum={44}
               endCountText="+"
               badgeText={"Clientes"}
-            />
-            {/* bage #3 */}
-            <Badge
-              containerStyles="absolute top-[35%] -right-[5rem]"
-              icon={<RiTeamFill />}
-              endCountNum={1}
-              endCountText="k"
-              badgeText={"Colaboradores y expertos"}
             />
             <div className="bg-hero w-[800px] h-[900px] bg-no-repeat absolute -top-20 -right-[160px]"></div>
             <div className="w-[520px] h-[472px] relative">
@@ -58,9 +58,12 @@ const Hero = () => {
             </div>
             <h1 className="h1 mb-4 uppercase">Osc top solutions group</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Con un equipo de 1000+ expertos y 27 años de experiencia,
-              lideramos la transformación tecnológica para optimizar procesos,
-              generar valor y elevar tu competitividad.
+              Somos un integrador tecnológico con presencia en 16
+              paises,Contamos con un equipo de más de 1000 colaboradores para
+              acompañar a nuestros clientes en el desarrollo de estrategias
+              tecnológicas digitales en la optimización de procesos, generación
+              de valor y competitividad. Tenemos una experiencia en el mercado
+              de más de 27 años
             </p>
 
             {/* button */}
