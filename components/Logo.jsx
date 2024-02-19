@@ -7,13 +7,7 @@ const Logo = () => {
 
   return (
     <Link href="/">
-      <Image
-        src={`${theme === "dark" ? "/logoWhite.png" : "/logoBlack.png"}`}
-        width={130}
-        height={54}
-        priority
-        alt="logo osc"
-      />
+      <Image src="/logo.png" width={130} height={54} priority alt="logo osc" />
     </Link>
   );
 };

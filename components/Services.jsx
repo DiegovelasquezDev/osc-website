@@ -1,73 +1,84 @@
-// Icons
-import { Wifi, Handshake, Briefcase, Lightbulb } from "lucide-react";
-// Components ui
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+"use client";
+import Link from "next/link";
 import { Button } from "./ui/button";
+import { Wifi } from "lucide-react";
 
-const servicesData = [
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// SWIPER
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper/modules";
+
+import ServiceCard from "@/components/ServiceCard";
+
+const serviceData = [
   {
-    icon: <Wifi size={72} strokeWidth={0.8} />,
-    title: "Servicio 1",
+    icon: <Wifi className="w-24 h-24" />,
+    title: "Datos en la nube",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ex incidunt officia architecto et ducimus pariatur recusandae ut culpa reiciendis assumenda, quia eveniet fugiat aliquid at laborum beatae eaque aperiam.",
-    path: "",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Lightbulb size={72} strokeWidth={0.8} />,
-    title: "Servicio 2",
+    icon: <Wifi className="w-24 h-24" />,
+    title: "Ciberseguridad",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ex incidunt officia architecto et ducimus pariatur recusandae ut culpa reiciendis assumenda, quia eveniet fugiat aliquid at laborum beatae eaque aperiam.",
-    path: "",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Handshake size={72} strokeWidth={0.8} />,
-    title: "Servicio 3",
+    icon: <Wifi className="w-24 h-24" />,
+    title: "IT/OT",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ex incidunt officia architecto et ducimus pariatur recusandae ut culpa reiciendis assumenda, quia eveniet fugiat aliquid at laborum beatae eaque aperiam.",
-    path: "",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Briefcase size={72} strokeWidth={0.8} />,
-    title: "Servicio 4",
+    icon: <Wifi className="w-24 h-24" />,
+    title: "Conectividad",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ex incidunt officia architecto et ducimus pariatur recusandae ut culpa reiciendis assumenda, quia eveniet fugiat aliquid at laborum beatae eaque aperiam.",
-    path: "",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24 mb-12 xl:mb-36">
+    <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
-          Servicios
-        </h2>
-        {/* Grid items */}
-        <div className="grid xl:grid-cols-2 justify-items-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
-          {servicesData.map((service, index) => {
-            return (
-              <Card
-                key={index}
-                className="w-full max-w-[480px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative"
-              >
-                <CardHeader className="text-primary absolute -top-[60px]">
-                  <div className="w-[140px] h-[80px] bg-background dark:bg-background flex justify-center items-center text-black dark:text-white">
-                    {service.icon}
-                  </div>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardTitle className="mb-4">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
+          <h2 className="section-title mb-6">
+            Servicios{" "}
+            <span className="absolute inset-x-0 top-12 bottom-0 h-2 bg-gradient-to-r from-[#3A349A] to-[#EB2566] rounded-full"></span>
+          </h2>
+          <p className="subtitle mb-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            temporibus dignissimos harum architecto.
+          </p>
+          <Link href="/">
+            <Button>Ver más</Button>
+          </Link>
+        </div>
+        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+          <Swiper
+            className="h-[480px]"
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+            }}
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={false}
+          >
+            {serviceData.slice(0, 4).map((service, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <ServiceCard serviceData={service} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </section>

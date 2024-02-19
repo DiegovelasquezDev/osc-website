@@ -1,34 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Components
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [header, setHeader] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const scrollYPos = window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setHeader(true) : setHeader(false);
-    });
-
-    // remove event
-    return () => window.removeEventListener("scroll", scrollYPos);
-  }, []);
-
   return (
-    <header
-      className={`${
-        header ? "py-4 bg-background shadow-md" : "py-6 dark:bg-background"
-      } sticky top-0 z-30 transition-all ${
-        pathname === "/" && "bg-background"
-      }`}
-    >
+    <header className="py-4 bg-transparent">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
