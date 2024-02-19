@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary py-12">
-      <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <p className="text-white">
+    <footer className="bg-primary py-6 text-white">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center md:text-left">
+          <p className="text-sm">
             &copy; 2024 OSC TOP GROUP SOLUTIONS. Todos los derechos reservados
           </p>
-          <p className="text-slate-300 space-x-2">
+          <p className="text-slate-300 space-x-2 text-sm">
             <Link href="#" className="hover:cursor-pointer">
               Terminos de servicios
             </Link>
@@ -19,25 +19,25 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <div className="flex items-center space-x-4 text-white">
+        <div className="flex items-center space-x-4 mt-4 md:mt-0 md:mr-4">
           <Link
             href="https://www.facebook.com/OSCTopsolutionsgroup"
             target="_blank"
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer w-6 h-6"
           >
             <FacebookIcon />
           </Link>
           <Link
             href="https://www.instagram.com/osctopsolutionsgroup/"
             target="_blank"
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer w-6 h-6"
           >
             <InstagramIcon />
           </Link>
           <Link
             href="https://www.linkedin.com/company/osc-telecoms/"
             target="_blank"
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer w-6 h-6"
           >
             <LinkedinIcon />
           </Link>

@@ -6,26 +6,27 @@
 
   @layer base {
     :root {
-      --background: 0 0% 100%;
-      --foreground: 240 19% 16%;
-      --card: 0 0% 100%;
-      --card-foreground: 240 19% 16%;
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
-      --primary: 244, 66%, 40%;
-      --primary-foreground: 0, 0%, 100%;
-      --secondary: 340, 84%, 53%;
-      --secondary-foreground: 300 0% 100%;
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 221.2 83.2% 53.3%;
-      --radius: 0.5rem;
+      /* LOS COLORES SE MANEJAN EN FORMATO HSL*/
+      --background: 0 0% 100%; /* Color de fondo */
+      --foreground: 240 19% 16%; /* Color de primer plano */
+      --card: 0 0% 100%; /* Color de fondo de las tarjetas */
+      --card-foreground: 240 19% 16%; /* Color de primer plano de las tarjetas */
+      --popover: 0 0% 100%; /* Color de fondo de los popovers */
+      --popover-foreground: 222.2 84% 4.9%; /* Color de primer plano de los popovers */
+      --primary: 244, 66%, 40%; /* Color primario */
+      --primary-foreground: 0, 0%, 100%; /* Color de primer plano para el color primario */
+      --secondary: 340, 84%, 53%; /* Color secundario */
+      --secondary-foreground: 300 0% 100%; /* Color de primer plano para el color secundario */
+      --muted: 210 40% 96.1%; /* Color apagado o "muted" */
+      --muted-foreground: 215.4 16.3% 46.9%; /* Color de primer plano para el color apagado */
+      --accent: 210 40% 96.1%; /* Color de acento */
+      --accent-foreground: 222.2 47.4% 11.2%; /* Color de primer plano para el color de acento */
+      --destructive: 0 84.2% 60.2%; /* Color destructivo */
+      --destructive-foreground: 210 40% 98%; /* Color de primer plano para el color destructivo */
+      --border: 214.3 31.8% 91.4%; /* Color de los bordes */
+      --input: 214.3 31.8% 91.4%; /* Color de fondo para campos de entrada */
+      --ring: 221.2 83.2% 53.3%; /* Color para el anillo de elementos enfocados */
+      --radius: 0.5rem; /* Radio de borde utilizado en elementos */
     }
   
     .dark {
