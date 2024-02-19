@@ -12,6 +12,7 @@ import {
 // Components
 import EarthCanvas from "./Earth";
 import Badge from "./Badge";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -45,7 +46,14 @@ const Hero = () => {
             />
             <div className="w-[520px] h-[472px] relative">
               <div className="bg-hero w-[800px] h-[800px] bg-no-repeat absolute -top-20 -right-[160px]"></div>
-              <EarthCanvas />
+              <Image
+                src="/prueba.gif"
+                width={500}
+                height={500}
+                alt="Multinacionales OSC"
+                priority
+              />
+              {/* <EarthCanvas /> */}
             </div>
           </div>
 
