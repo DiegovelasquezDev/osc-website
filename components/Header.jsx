@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 // Components
 import Logo from "./Logo";
@@ -9,7 +10,22 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-4 bg-transparent">
+    <motion.header
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0, x: -20 },
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            delay: 0.2,
+            duration: 0.3,
+          },
+        },
+      }}
+      className="py-4 bg-transparent"
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
@@ -29,7 +45,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 
 // Theme provider
 import { ThemeProvider } from "@/components/ThemeProvider";
+import StartCanvas from "@/components/startBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +22,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body
+        className={`${inter.className} antialiased overflow-y-scroll overflow-x-hidden`}
+      >
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
+          <StartCanvas />
           {children}
           <Footer />
         </ThemeProvider>

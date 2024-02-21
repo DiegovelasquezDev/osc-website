@@ -62,7 +62,50 @@
     @apply bg-background text-foreground;
   }
 }
- 
+
+.Welcome-text {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+ /* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 .h1{
   @apply text-4xl xl:text-[60px] xl:leading-[80px] tracking-[-2px] font-bold;
 }
@@ -94,4 +137,60 @@
 .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
 .section-pagination-horizontal.section-pagination-bullets.section-pagination-bullet {
   @apply bg-primary
+}
+
+
+.ecosystem .progress {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  color: var(--background);
+  font-size: 46px;
+}
+
+.ecosystem .progress .progressBar {
+  height: 10px;
+  background: rgb(58,52,154);
+  background: linear-gradient(90deg, rgba(58,52,154,1) 0%, rgba(235,37,102,1) 100%);
+  border-radius: 10px;
+}
+
+.ecosystem .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ecosystem .container .wrapper{
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.ecosystem .container .wrapper .imageContainer{
+  flex: 1;
+  height: 50%;
+}
+
+.ecosystem .container .wrapper .imageContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ecosystem .container .textContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
