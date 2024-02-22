@@ -9,15 +9,14 @@ const ServiceCard = ({ serviceData }) => {
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
         <div className="relative w-full h-[300px] flex items-center justify-center bg-primary dark:bg-secondary/40 xl:bg-[110%] overflow-hidden">
-          Imagen
-          {/* <Image
+          <Image
             className="absolute bottom-8 shadow-2xl"
-            src=""
-            width={247}
-            height={250}
-            alt={serviceData.tilte}
+            src={serviceData.img}
+            width={400}
+            height={400}
+            alt={serviceData.title}
             priority
-          /> */}
+          />
           <div>
             <Link
               href="#"

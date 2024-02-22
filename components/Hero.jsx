@@ -4,19 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Send, Footprints } from "lucide-react";
 import { motion } from "framer-motion";
 
-import {
-  RiBriefcase4Fill,
-  RiGroupFill,
-  RiTeamFill,
-} from "react-icons/ri";
+import { RiBriefcase4Fill, RiGroupFill, RiTeamFill } from "react-icons/ri";
 
 // Components
 import EarthCanvas from "./Earth";
 import Badge from "./Badge";
-import {
-  slideInFromLeft,
-  slideInFromRight,
-} from "@/utils/motion";
+import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 
 const Hero = () => {
   return (

@@ -6,7 +6,6 @@ import { slideInFromLeft } from "@/utils/motion";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { Footprints } from "lucide-react";
-import CarruselClientes from "./CarruselClientes";
 
 const Partners = () => {
   return (
@@ -57,9 +56,6 @@ const Partners = () => {
               priority
             />
           </div>
-        </div>
-        <div className="mt-36">
-          <CarruselClientes />
         </div>
       </div>
     </section>

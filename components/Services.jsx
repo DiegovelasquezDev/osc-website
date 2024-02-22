@@ -15,25 +15,25 @@ import ServiceCard from "@/components/ServiceCard";
 
 const serviceData = [
   {
-    icon: <Wifi className="w-24 h-24" />,
+    img: "/datacloud.png",
     title: "Datos en la nube",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Wifi className="w-24 h-24" />,
+    img: "/datacloud.png",
     title: "Ciberseguridad",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Wifi className="w-24 h-24" />,
+    img: "/datacloud.png",
     title: "IT/OT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
   },
   {
-    icon: <Wifi className="w-24 h-24" />,
+    img: "/datacloud.png",
     title: "Conectividad",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus dignissimos harum architecto.",
@@ -57,7 +57,7 @@ const Services = () => {
             <Button>Ver más</Button>
           </Link>
         </div>
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="xl:max-w-[1000px] xl:absolute right-4 top-0">
           <Swiper
             className="h-[480px]"
             slidesPerView={1}
