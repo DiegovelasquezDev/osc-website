@@ -1,17 +1,17 @@
-import BusinessLine from "@/components/BusinessLine";
-import Partners from "@/components/Partners";
-import Cta from "@/components/Cta";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import CarruselClientes from "@/components/CarruselClientes";
+import BusinessLine from "@/components/Hero/BusinessLine";
+import Partners from "@/components/Hero/Partners";
+import Cta from "@/components/Hero/Cta";
+import Services from "@/components/Hero/Services";
+import CarruselHero from "@/components/Hero/CarruselHero";
+import ClientSlider from "@/components/ClientSlider";
 
 export default function Home() {
   return (
     <main className="h-full w-full">
       <div className="flex flex-col gap-20">
-        <Hero />
-        <CarruselClientes />
+        <CarruselHero />
         <Partners />
+        <ClientSlider />
         <BusinessLine />
         <Services />
         <Cta />

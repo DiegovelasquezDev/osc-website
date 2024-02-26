@@ -1,4 +1,4 @@
-import ClientsComponent from "@/components/ClientsComponent";
+import ClientsComponent from "@/components/ClientSlider";
 import Ecosystem from "@/components/Ecosystem";
 
 const Clients = () => {

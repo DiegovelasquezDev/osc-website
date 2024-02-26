@@ -73,8 +73,8 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url(/home/hero-bg.png)",
-        contact_illustration_light: "url(/contact/illustration-light.svg)",
-        contact_illustration_dark: "url(/contact/illustration-dark.svg)",
+        contact_illustration_light: "url(/contact/contact.png)",
+        bgcards: "url(/bgcards.svg)",
         services_bg: "url(/services/bgServices.png)",
       },
     },

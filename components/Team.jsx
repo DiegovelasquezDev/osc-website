@@ -1,15 +1,11 @@
 "use client";
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { Wifi } from "lucide-react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // SWIPER
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import TeamCard from "@/components/TeamCard";
 
@@ -75,39 +71,37 @@ const teamData = [
 
 const Team = () => {
   return (
-    <section className="relative mb-12 xl:mb-48">
-      <div className="container mx-auto">
-        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
-          <h2 className="section-title mb-6">
-            Nuestro Equipo{" "}
-            <span className="absolute inset-x-0 top-12 bottom-0 h-2 bg-gradient-to-r from-[#3A349A] to-[#EB2566] rounded-full"></span>
+    <section className="w-full py-8 md:py-12 lg:py-16 xl:py- ">
+      <div className="container px-4 mx-auto">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
+            Nuestro equipo
           </h2>
-          <p className="subtitle mb-8">
-            Te mostramos nuestras caras más Importantes para que te familiarices
-            con nosotros
+          <p className="mx-auto max-w-[700px] text-gray-500 text-center md:text-lg lg:text-base dark:text-gray-400">
+            Te mostramos nuestras caras más importantes para que te familiarices
+            con nosotros.
           </p>
         </div>
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="mx-auto max-w-screen-xl mt-10">
           <Swiper
-            className="h-[480px]"
             slidesPerView={1}
             breakpoints={{
               640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
             }}
             spaceBetween={30}
-            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination, Navigation]}
+            pagination={{ clickable: true, dynamicBullets: true }}
             loop={true}
-            autoplay={false}
+            navigation={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
           >
-            {teamData.slice(0, 10).map((service, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <TeamCard teamData={service} />
-                </SwiperSlide>
-              );
-            })}
+            {teamData.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard teamData={member} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
